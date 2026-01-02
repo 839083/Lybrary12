@@ -32,8 +32,8 @@ const Auth = () => {
     setLoading(true);
 
     const url = isLogin
-      ? "https://lybrary12-1backend.onrender.com/api/auth/login"
-      : "https://lybrary12-1backend.onrender.com/api/auth/signup";
+      ? "srv-d5bpkf3uibrs73clnn60/api/auth/login"
+      : "srv-d5bpkf3uibrs73clnn60/api/auth/signup";
 
     try {
       const res = await fetch(url, {
@@ -85,7 +85,7 @@ const Auth = () => {
   /* ================= GOOGLE AUTH ================= */
   const handleGoogleLogin = async (credential) => {
     try {
-      const res = await fetch("https://lybrary12-1backend.onrender.com/api/auth/google", {
+      const res = await fetch("srv-d5bpkf3uibrs73clnn60/api/auth/google", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token: credential }),
